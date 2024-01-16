@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>PDF Generator</h2>
+    <form id="pdfForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="uid">UID:</label>
+      <input type="text" id="uid" required>
+
+      <button type="button" id="generate-pdf">Generate PDF</button>
+    </form>
+    
+    <div id="hashContainer" style="display: none;">
+      <p id="hashText"></p>
+      <a id="downloadLink" download="output.pdf" style="display: none;">Download PDF</a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
